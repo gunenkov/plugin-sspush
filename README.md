@@ -16,6 +16,7 @@
 
 <docgen-index>
 
+* [`echo(...)`](#echo)
 * [`showBannerNotification(...)`](#showbannernotification)
 * [`showTasksNotification(...)`](#showtasksnotification)
 * [`resetBadgeCount()`](#resetbadgecount)
@@ -24,6 +25,20 @@
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
+
+### echo(...)
+
+```typescript
+echo(options: { value: string; }) => any
+```
+
+| Param         | Type                            |
+| ------------- | ------------------------------- |
+| **`options`** | <code>{ value: string; }</code> |
+
+**Returns:** <code>any</code>
+
+--------------------
 
 
 ### showBannerNotification(...)

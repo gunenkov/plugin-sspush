@@ -1,0 +1,71 @@
+{
+  "api": {
+    "name": "SsPushPlugin",
+    "slug": "sspushplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "echo",
+        "signature": "(options: { value: string; }) => any",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ value: string; }"
+          }
+        ],
+        "returns": "any",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "echo"
+      },
+      {
+        "name": "showBannerNotification",
+        "signature": "(options: { sound: boolean; vibration: boolean; vibrationLength: number; statusBarIcon: boolean; }) => any",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ sound: boolean; vibration: boolean; vibrationLength: number; statusBarIcon: boolean; }"
+          }
+        ],
+        "returns": "any",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "showbannernotification"
+      },
+      {
+        "name": "showTasksNotification",
+        "signature": "(options: { countOfTasks: number; sound: boolean; vibration: boolean; statusBarIcon: boolean; vibrationLength: number; }) => any",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ countOfTasks: number; sound: boolean; vibration: boolean; statusBarIcon: boolean; vibrationLength: number; }"
+          }
+        ],
+        "returns": "any",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "showtasksnotification"
+      },
+      {
+        "name": "resetBadgeCount",
+        "signature": "() => any",
+        "parameters": [],
+        "returns": "any",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "resetbadgecount"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [],
+  "enums": []
+}
