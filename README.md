@@ -2,8 +2,8 @@
 
 Плагин предоставляет реализацию специфичных пуш-уведомлений для приложения "Мобильный пробоотборщик"
 
-!(https://i.ibb.co/rQJsTmd/image.jpg)
-!(https://i.ibb.co/NYgvnMS/image.jpg)
+![1](https://i.ibb.co/rQJsTmd/image.jpg)
+![2](https://i.ibb.co/NYgvnMS/image.jpg)
 
 ## Установка
 
