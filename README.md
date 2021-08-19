@@ -1,19 +1,21 @@
 # plugin-sspush
 
-Special PUSHes for Android
+Плагин предоставляет реализацию специфичных пуш-уведомлений для приложения "Мобильный пробоотборщик"
 
-## Install
+!(https://i.ibb.co/rQJsTmd/image.jpg)
+!(https://i.ibb.co/NYgvnMS/image.jpg)
 
-```bash
-npm install plugin-sspush
-npx cap sync
-```
+## Установка
+
+* Загрузите код репозитория
+* Поместите код репозитория в папку node_modules проекта
+* Импортируйте модуль: import {SsPush} from "..."
+* Используйте: SsPush.showTasksNotification(...params...)
 
 ## API
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
 * [`showBannerNotification(...)`](#showbannernotification)
 * [`showTasksNotification(...)`](#showtasksnotification)
 * [`resetBadgeCount()`](#resetbadgecount)
@@ -22,20 +24,6 @@ npx cap sync
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
-
-### echo(...)
-
-```typescript
-echo(options: { value: string; }) => any
-```
-
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
-
-**Returns:** <code>any</code>
-
---------------------
 
 
 ### showBannerNotification(...)
