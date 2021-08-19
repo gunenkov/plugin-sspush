@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="background">#91A4FF</color>
+
+    <color name="body">#FFFFFF</color>
+    <color name="body_invert">#1C1F2B</color>
+
+    <color name="text_body">#000000</color>
+    <color name="input_body">#12151E</color>
+    <color name="text_color">#606580</color>
+    <color name="text_color_inverted">#8C99B2</color>
+    <color name="toolbar_text">#303549</color>
+    <color name="text_button">#FFFFFF</color>
+    <color name="button">#0089FF</color>
+    <color name="button2">#D7E2F2</color>
+    <color name="button_not_enable">#0E5495</color>
+    <color name="button_not_enable_text">#79808E</color>
+    <color name="status_bar">#12151E</color>
+    <color name="line_color">#FFFFFF</color>
+
+    <color name="icon_background">#FFFFFF</color>
+    <color name="icon_active">#0089FF</color>
+    <color name="icon_not_active">#606580</color>
+
+    <color name="item_background">#FFFFFF</color>
+    <color name="item_text">#606580</color>
+    <color name="item_text2">#8C99B2</color>
+
+
+    <color name="blue_button">#0089FF</color>
+    <color name="gray_button">#303549</color>
+
+    <color name="map_button">#D7E2F2</color>
+
+    <color name="rectangle_color">#F5F8FD</color>
+
+    <color name="task_indicator_new">#8C99B2</color>
+    <color name="task_indicator_ended">#0089FF</color>
+    <color name="task_indicator_canceled">#FDD13A</color>
+    <color name="task_indicator_number">#12151E</color>
+
+    <color name="spinner_border">#C4D3E9</color>
+    <color name="spinner_body">#F5F8FD</color>
+
+    <color name="about_body">#D7E2F2</color>
+
+    <color name="support_body">#F5F8FD</color>
+
+    <color name="task_color_normal">#BFD7E2F2</color>
+    <color name="task_color_progress">#8C99B2</color>
+
+    <color name="video_duraion">#0089FF</color>
+
+</resources>

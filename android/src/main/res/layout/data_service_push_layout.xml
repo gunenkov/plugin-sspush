@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background">
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_gazprom" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="18dp"
+        android:layout_toEndOf="@+id/imageView9"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:src="@drawable/ic_text" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:adjustViewBounds="true"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_plant_png" />
+</RelativeLayout>
