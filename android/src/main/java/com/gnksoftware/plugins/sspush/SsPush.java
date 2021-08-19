@@ -1,5 +1,6 @@
 package com.gnksoftware.plugins.sspush;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -76,7 +77,22 @@ public class SsPush {
     public void showTasksNotification(int countOfTasks, boolean sound, boolean vibration,
                                       int vibrationLength, boolean statusBarIcon) {
         RemoteViews contentView =  new RemoteViews(context.getPackageName(), R.layout.data_service_push_new_layout);
+
+        String countText = getText(countOfTasks);
+
         contentView.setTextViewText(R.id.new_push_body, getText(countOfTasks));
+
+        if (countText.endsWith("ЗАДАНИЙ")) {
+            contentView.setTextViewText(R.id.new_push_b, "ДОСТУПНО");
+        }
+
+        if (countText.endsWith("ЗАДАНИЯ")) {
+            contentView.setTextViewText(R.id.new_push_b, "ДОСТУПНЫ");
+        }
+
+        if (countText.endsWith("ЗАДАНИЕ")) {
+            contentView.setTextViewText(R.id.new_push_b, "ДОСТУПНО");
+        }
 
         NotificationCompat.Builder notificationBuilder = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
@@ -117,15 +133,15 @@ public class SsPush {
         int d1 = countOfTasks % 10;
 
         if (d > 10 && d < 20) {
-            return "Доступно " + countOfTasks + " заданий";
+            return "" + countOfTasks + " ЗАДАНИЙ";
         }
         if (d1 > 1 && d1 < 5) {
-            return "Доступно " + countOfTasks + " задания";
+            return "" + countOfTasks + " ЗАДАНИЯ";
         }
         if (d1 == 1) {
-            return "Доступно " + countOfTasks + " задание";
+            return "" + countOfTasks + " ЗАДАНИЕ";
         }
 
-        return "Доступно " + countOfTasks + " заданий";
+        return "" + countOfTasks + " ЗАДАНИЙ";
     }
 }
