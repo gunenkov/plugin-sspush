@@ -6,22 +6,6 @@
     "tags": [],
     "methods": [
       {
-        "name": "echo",
-        "signature": "(options: { value: string; }) => any",
-        "parameters": [
-          {
-            "name": "options",
-            "docs": "",
-            "type": "{ value: string; }"
-          }
-        ],
-        "returns": "any",
-        "tags": [],
-        "docs": "",
-        "complexTypes": [],
-        "slug": "echo"
-      },
-      {
         "name": "showBannerNotification",
         "signature": "(options: { sound: boolean; vibration: boolean; vibrationLength: number; statusBarIcon: boolean; }) => any",
         "parameters": [
@@ -33,7 +17,7 @@
         ],
         "returns": "any",
         "tags": [],
-        "docs": "",
+        "docs": "Метод запускает нативный ForegroundService.\nВызывает локальное пуш-уведомление (ID=1) с баннером, которое остается активным даже после закрытия приложения.\nПри нажатии на баннер открывается нативная MainActivity.",
         "complexTypes": [],
         "slug": "showbannernotification"
       },
@@ -49,7 +33,7 @@
         ],
         "returns": "any",
         "tags": [],
-        "docs": "",
+        "docs": "Метод вызывает локальное пуш-уведомление (ID=2) с количеством задач.\nПри нажатии на уведомление открывается нативная MainActivity.",
         "complexTypes": [],
         "slug": "showtasksnotification"
       },
@@ -59,7 +43,7 @@
         "parameters": [],
         "returns": "any",
         "tags": [],
-        "docs": "",
+        "docs": "Метод удаляет все уведомления за исключением баннера и сбрасывает счетчик у иконки приложения.",
         "complexTypes": [],
         "slug": "resetbadgecount"
       }

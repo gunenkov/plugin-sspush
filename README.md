@@ -25,12 +25,15 @@
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-
 ### showBannerNotification(...)
 
 ```typescript
 showBannerNotification(options: { sound: boolean; vibration: boolean; vibrationLength: number; statusBarIcon: boolean; }) => any
 ```
+
+Метод запускает нативный ForegroundService.
+Вызывает локальное пуш-уведомление (ID=1) с баннером, которое остается активным даже после закрытия приложения.
+При нажатии на баннер открывается нативная MainActivity.
 
 | Param         | Type                                                                                                  |
 | ------------- | ----------------------------------------------------------------------------------------------------- |
@@ -47,6 +50,9 @@ showBannerNotification(options: { sound: boolean; vibration: boolean; vibrationL
 showTasksNotification(options: { countOfTasks: number; sound: boolean; vibration: boolean; statusBarIcon: boolean; vibrationLength: number; }) => any
 ```
 
+Метод вызывает локальное пуш-уведомление (ID=2) с количеством задач.
+При нажатии на уведомление открывается нативная MainActivity.
+
 | Param         | Type                                                                                                                        |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | **`options`** | <code>{ countOfTasks: number; sound: boolean; vibration: boolean; statusBarIcon: boolean; vibrationLength: number; }</code> |
@@ -61,6 +67,8 @@ showTasksNotification(options: { countOfTasks: number; sound: boolean; vibration
 ```typescript
 resetBadgeCount() => any
 ```
+
+Метод удаляет все уведомления за исключением баннера и сбрасывает счетчик у иконки приложения.
 
 **Returns:** <code>any</code>
 

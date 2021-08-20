@@ -1,6 +1,5 @@
 package com.gnksoftware.plugins.sspush;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -16,11 +15,11 @@ import androidx.core.app.NotificationCompat;
 
 public class SsPush {
 
+    public static NotificationCompat.Builder builder;
     private Activity activity;
     private Context context;
     private NotificationChannel notificationChannel;
     private NotificationManager notificationManager;
-    private int notificationId = 1;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     public SsPush(Activity activity) {
@@ -32,11 +31,6 @@ public class SsPush {
                 context.getResources().getString(R.string.channel_name),
                 NotificationManager.IMPORTANCE_HIGH);
         notificationManager.createNotificationChannel(notificationChannel);
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    public String echo(String value) {
-        return value;
     }
 
     public void showBannerNotification(boolean sound, boolean vibration,
@@ -70,8 +64,10 @@ public class SsPush {
             v.vibrate(vibrationLength);
         }
 
-        notificationManager.notify(notificationId, notificationBuilder.build());
-        notificationId++;
+        SsPush.builder = notificationBuilder;
+
+        Intent serviceIntent = new Intent(activity, NotificationService.class);
+        context.startService(serviceIntent);
     }
 
     public void showTasksNotification(int countOfTasks, boolean sound, boolean vibration,
@@ -82,23 +78,11 @@ public class SsPush {
 
         contentView.setTextViewText(R.id.new_push_body, getText(countOfTasks));
 
-        if (countText.endsWith("ЗАДАНИЙ")) {
-            contentView.setTextViewText(R.id.new_push_b, "ДОСТУПНО");
-        }
-
-        if (countText.endsWith("ЗАДАНИЯ")) {
-            contentView.setTextViewText(R.id.new_push_b, "ДОСТУПНЫ");
-        }
-
-        if (countText.endsWith("ЗАДАНИЕ")) {
-            contentView.setTextViewText(R.id.new_push_b, "ДОСТУПНО");
-        }
-
         NotificationCompat.Builder notificationBuilder = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             notificationBuilder = new NotificationCompat.Builder(context, notificationChannel.getId())
                     .setCustomContentView(contentView)
-                    .setPriority(NotificationCompat.PRIORITY_HIGH)
+                    .setPriority(NotificationCompat.PRIORITY_MAX)
                     .setNumber(countOfTasks)
                     .setContentIntent(PendingIntent.getActivity(context, 0, new Intent(context, activity.getClass()), 0));
         }
@@ -120,8 +104,7 @@ public class SsPush {
             v.vibrate(vibrationLength);
         }
 
-        notificationManager.notify(notificationId, notificationBuilder.build());
-        notificationId++;
+        notificationManager.notify(2, notificationBuilder.build());
     }
 
     public void resetBadgeCount() {

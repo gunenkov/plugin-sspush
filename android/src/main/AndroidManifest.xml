@@ -1,3 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.gnksoftware.plugins.sspush">
+    <application>
+        <service android:enabled="true" android:name="com.gnksoftware.plugins.sspush.NotificationService"></service>
+    </application>
 </manifest>
