@@ -9,11 +9,19 @@ const SsPush = core.registerPlugin('SsPush', {
 });
 
 class SsPushWeb extends core.WebPlugin {
-    async showBannerNotification(options) {
+    async showDriverBannerNotification(options) {
         console.log('Плагин не реализован для Web. Используйте ОС Android');
         console.log(options);
     }
-    async showTasksNotification(options) {
+    async showChemistryBannerNotification(options) {
+        console.log('Плагин не реализован для Web. Используйте ОС Android');
+        console.log(options);
+    }
+    async showDriverTasksNotification(options) {
+        console.log('Плагин не реализован для Web. Используйте ОС Android');
+        console.log(options);
+    }
+    async showChemistryTasksNotification(options) {
         console.log('Плагин не реализован для Web. Используйте ОС Android');
         console.log(options);
     }

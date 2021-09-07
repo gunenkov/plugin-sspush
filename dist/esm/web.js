@@ -1,10 +1,18 @@
 import { WebPlugin } from '@capacitor/core';
 export class SsPushWeb extends WebPlugin {
-    async showBannerNotification(options) {
+    async showDriverBannerNotification(options) {
         console.log('Плагин не реализован для Web. Используйте ОС Android');
         console.log(options);
     }
-    async showTasksNotification(options) {
+    async showChemistryBannerNotification(options) {
+        console.log('Плагин не реализован для Web. Используйте ОС Android');
+        console.log(options);
+    }
+    async showDriverTasksNotification(options) {
+        console.log('Плагин не реализован для Web. Используйте ОС Android');
+        console.log(options);
+    }
+    async showChemistryTasksNotification(options) {
         console.log('Плагин не реализован для Web. Используйте ОС Android');
         console.log(options);
     }

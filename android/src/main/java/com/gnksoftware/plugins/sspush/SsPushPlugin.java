@@ -37,11 +37,11 @@ public class SsPushPlugin extends Plugin {
     }
 
     @PluginMethod
-    public void showBannerNotification(PluginCall call) {
+    public void showDriverBannerNotification(PluginCall call) {
         boolean vibration = call.getBoolean("vibration");
 
         if (!vibration) {
-            implementation.showBannerNotification(
+            implementation.showDriverBannerNotification(
                     call.getBoolean("sound"),
                     call.getBoolean("vibration"),
                     call.getInt("vibrationLength"),
@@ -51,7 +51,7 @@ public class SsPushPlugin extends Plugin {
 
         else {
             if (getPermissionState("vibration") == PermissionState.GRANTED) {
-                implementation.showBannerNotification(
+                implementation.showDriverBannerNotification(
                         call.getBoolean("sound"),
                         call.getBoolean("vibration"),
                         call.getInt("vibrationLength"),
@@ -64,11 +64,38 @@ public class SsPushPlugin extends Plugin {
     }
 
     @PluginMethod
-    public void showTasksNotification(PluginCall call) {
+    public void showChemistryBannerNotification(PluginCall call) {
         boolean vibration = call.getBoolean("vibration");
 
         if (!vibration) {
-            implementation.showTasksNotification(
+            implementation.showChemistryBannerNotification(
+                    call.getBoolean("sound"),
+                    call.getBoolean("vibration"),
+                    call.getInt("vibrationLength"),
+                    call.getBoolean("statusBarIcon"));
+            call.resolve();
+        }
+
+        else {
+            if (getPermissionState("vibration") == PermissionState.GRANTED) {
+                implementation.showChemistryBannerNotification(
+                        call.getBoolean("sound"),
+                        call.getBoolean("vibration"),
+                        call.getInt("vibrationLength"),
+                        call.getBoolean("statusBarIcon"));
+                call.resolve();
+            } else {
+                call.reject("Permission is required!");
+            }
+        }
+    }
+
+    @PluginMethod
+    public void showDriverTasksNotification(PluginCall call) {
+        boolean vibration = call.getBoolean("vibration");
+
+        if (!vibration) {
+            implementation.showDriverTasksNotification(
                     call.getInt("countOfTasks"),
                     call.getBoolean("sound"),
                     call.getBoolean("vibration"),
@@ -79,7 +106,36 @@ public class SsPushPlugin extends Plugin {
 
         else {
             if (getPermissionState("vibration") == PermissionState.GRANTED) {
-                implementation.showTasksNotification(
+                implementation.showDriverTasksNotification(
+                        call.getInt("countOfTasks"),
+                        call.getBoolean("sound"),
+                        call.getBoolean("vibration"),
+                        call.getInt("vibrationLength"),
+                        call.getBoolean("statusBarIcon"));
+                call.resolve();
+            } else {
+                call.reject("Permission is required!");
+            }
+        }
+    }
+
+    @PluginMethod
+    public void showChemistryTasksNotification(PluginCall call) {
+        boolean vibration = call.getBoolean("vibration");
+
+        if (!vibration) {
+            implementation.showChemistryTasksNotification(
+                    call.getInt("countOfTasks"),
+                    call.getBoolean("sound"),
+                    call.getBoolean("vibration"),
+                    call.getInt("vibrationLength"),
+                    call.getBoolean("statusBarIcon"));
+            call.resolve();
+        }
+
+        else {
+            if (getPermissionState("vibration") == PermissionState.GRANTED) {
+                implementation.showChemistryTasksNotification(
                         call.getInt("countOfTasks"),
                         call.getBoolean("sound"),
                         call.getBoolean("vibration"),

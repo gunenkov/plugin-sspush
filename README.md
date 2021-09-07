@@ -13,8 +13,10 @@
 
 <docgen-index>
 
-* [`showBannerNotification(...)`](#showbannernotification)
-* [`showTasksNotification(...)`](#showtasksnotification)
+* [`showDriverBannerNotification(...)`](#showdriverbannernotification)
+* [`showChemistryBannerNotification(...)`](#showchemistrybannernotification)
+* [`showDriverTasksNotification(...)`](#showdrivertasksnotification)
+* [`showChemistryTasksNotification(...)`](#showchemistrytasksnotification)
 * [`resetBadgeCount()`](#resetbadgecount)
 
 </docgen-index>
@@ -22,10 +24,10 @@
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### showBannerNotification(...)
+### showDriverBannerNotification(...)
 
 ```typescript
-showBannerNotification(options: { sound: boolean; vibration: boolean; vibrationLength: number; statusBarIcon: boolean; }) => any
+showDriverBannerNotification(options: { sound: boolean; vibration: boolean; vibrationLength: number; statusBarIcon: boolean; }) => any
 ```
 
 Метод запускает нативный ForegroundService.
@@ -41,10 +43,47 @@ showBannerNotification(options: { sound: boolean; vibration: boolean; vibrationL
 --------------------
 
 
-### showTasksNotification(...)
+### showChemistryBannerNotification(...)
 
 ```typescript
-showTasksNotification(options: { countOfTasks: number; sound: boolean; vibration: boolean; statusBarIcon: boolean; vibrationLength: number; }) => any
+showChemistryBannerNotification(options: { sound: boolean; vibration: boolean; vibrationLength: number; statusBarIcon: boolean; }) => any
+```
+
+Метод запускает нативный ForegroundService.
+Вызывает локальное пуш-уведомление (ID=1) с баннером, которое остается активным даже после закрытия приложения.
+При нажатии на баннер открывается нативная MainActivity.
+
+| Param         | Type                                                                                                  |
+| ------------- | ----------------------------------------------------------------------------------------------------- |
+| **`options`** | <code>{ sound: boolean; vibration: boolean; vibrationLength: number; statusBarIcon: boolean; }</code> |
+
+**Returns:** <code>any</code>
+
+--------------------
+
+
+### showDriverTasksNotification(...)
+
+```typescript
+showDriverTasksNotification(options: { countOfTasks: number; sound: boolean; vibration: boolean; statusBarIcon: boolean; vibrationLength: number; }) => any
+```
+
+Метод вызывает локальное пуш-уведомление (ID=2) с количеством задач.
+При нажатии на уведомление открывается нативная MainActivity.
+
+| Param         | Type                                                                                                                        |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| **`options`** | <code>{ countOfTasks: number; sound: boolean; vibration: boolean; statusBarIcon: boolean; vibrationLength: number; }</code> |
+
+**Returns:** <code>any</code>
+
+--------------------
+
+
+### showChemistryTasksNotification(...)
+
+```typescript
+showChemistryTasksNotification(options: { countOfTasks: number; sound: boolean; vibration: boolean; statusBarIcon: boolean; vibrationLength: number; }) => any
 ```
 
 Метод вызывает локальное пуш-уведомление (ID=2) с количеством задач.

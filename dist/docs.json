@@ -6,7 +6,7 @@
     "tags": [],
     "methods": [
       {
-        "name": "showBannerNotification",
+        "name": "showDriverBannerNotification",
         "signature": "(options: { sound: boolean; vibration: boolean; vibrationLength: number; statusBarIcon: boolean; }) => any",
         "parameters": [
           {
@@ -19,10 +19,26 @@
         "tags": [],
         "docs": "Метод запускает нативный ForegroundService.\nВызывает локальное пуш-уведомление (ID=1) с баннером, которое остается активным даже после закрытия приложения.\nПри нажатии на баннер открывается нативная MainActivity.",
         "complexTypes": [],
-        "slug": "showbannernotification"
+        "slug": "showdriverbannernotification"
       },
       {
-        "name": "showTasksNotification",
+        "name": "showChemistryBannerNotification",
+        "signature": "(options: { sound: boolean; vibration: boolean; vibrationLength: number; statusBarIcon: boolean; }) => any",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ sound: boolean; vibration: boolean; vibrationLength: number; statusBarIcon: boolean; }"
+          }
+        ],
+        "returns": "any",
+        "tags": [],
+        "docs": "Метод запускает нативный ForegroundService.\nВызывает локальное пуш-уведомление (ID=1) с баннером, которое остается активным даже после закрытия приложения.\nПри нажатии на баннер открывается нативная MainActivity.",
+        "complexTypes": [],
+        "slug": "showchemistrybannernotification"
+      },
+      {
+        "name": "showDriverTasksNotification",
         "signature": "(options: { countOfTasks: number; sound: boolean; vibration: boolean; statusBarIcon: boolean; vibrationLength: number; }) => any",
         "parameters": [
           {
@@ -35,7 +51,23 @@
         "tags": [],
         "docs": "Метод вызывает локальное пуш-уведомление (ID=2) с количеством задач.\nПри нажатии на уведомление открывается нативная MainActivity.",
         "complexTypes": [],
-        "slug": "showtasksnotification"
+        "slug": "showdrivertasksnotification"
+      },
+      {
+        "name": "showChemistryTasksNotification",
+        "signature": "(options: { countOfTasks: number; sound: boolean; vibration: boolean; statusBarIcon: boolean; vibrationLength: number; }) => any",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "{ countOfTasks: number; sound: boolean; vibration: boolean; statusBarIcon: boolean; vibrationLength: number; }"
+          }
+        ],
+        "returns": "any",
+        "tags": [],
+        "docs": "Метод вызывает локальное пуш-уведомление (ID=2) с количеством задач.\nПри нажатии на уведомление открывается нативная MainActivity.",
+        "complexTypes": [],
+        "slug": "showchemistrytasksnotification"
       },
       {
         "name": "resetBadgeCount",
